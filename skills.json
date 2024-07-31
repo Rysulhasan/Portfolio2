@@ -30,5 +30,30 @@
     {
         "name": "GitHub",
         "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-    }  
+    },
+
+    {
+        "name": "Spring Boot",  
+        "icon": "https://img.icons8.com/color/48/000000/spring-logo.png"
+    },
+
+    {
+        "name": "hibernate",  
+        "icon": "https://img.icons8.com/color/48/000000/hibernate.png"
+    },
+
+    {
+        "name": "TypeScript",  
+        "icon": "https://img.icons8.com/color/48/000000/typescript.png"
+    },
+
+    {
+        "name": "Angular",  
+        "icon": "https://img.icons8.com/color/48/000000/angularjs.png"
+    },
+
+    {
+        "name": "Debug",  
+        "icon": "https://img.icons8.com/color/48/000000/bug.png"
+    }
 ]

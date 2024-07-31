@@ -1,0 +1,20 @@
+[
+    {
+      "name": "Quick Fill App",
+      "desc": "A versatile Chrome extension designed to automate form filling tasks. Built with JavaScript and spring boot framework.",
+      "image": "quickfillimg",
+      "category": "extension"
+    },
+    {
+      "name": "Portfolio",
+      "desc": "Personal portfolio website. Built with HTML, CSS, and JavaScript.",
+      "image": "portfolioimg",
+      "category": "web"
+    },
+    {
+      "name": "Employee Leave System",
+      "desc": "A web application with role-based access control, built using Angular and Spring Boot. It features secure authentication, leave tracking.",
+      "image": "employeeleavesystemimg",
+      "category": "web application"
+    }
+  ]

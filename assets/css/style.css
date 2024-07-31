@@ -393,7 +393,7 @@ header .navbar ul li a:hover {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
   padding: 4rem;
 }
 
@@ -546,7 +546,7 @@ header .navbar ul li a:hover {
   margin-top: 2rem;
 }
 
-.skills .container .row {
+.skills .container .row { 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
@@ -1083,7 +1083,7 @@ header .navbar ul li a:hover {
   width: 100%;
   background: #fff;
   border-radius: 1.5rem;
-  margin: 2rem 5rem;
+  margin:auto;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 

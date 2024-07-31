@@ -9,11 +9,11 @@ $(document).ready(function () {
         $('#menu').removeClass('fa-times');
         $('.navbar').removeClass('nav-toggle');
 
-        if (window.scrollY > 60) {
-            document.querySelector('#scroll-top').classList.add('active');
-        } else {
-            document.querySelector('#scroll-top').classList.remove('active');
-        }
+        // if (window.scrollY > 60) {
+        //     document.querySelector('#scroll-top').classList.add('active');
+        // } else {
+        //     document.querySelector('#scroll-top').classList.remove('active');
+        // }
 
         // scroll spy
         $('section').each(function () {
@@ -39,9 +39,9 @@ $(document).ready(function () {
 
     // <!-- emailjs to mail contact form data -->
     $("#contact-form").submit(function (event) {
-        emailjs.init("vishvasg14@gmail.com");
+        emailjs.init("TQkN3WRDsuzModKfv");
 
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+        emailjs.sendForm('service_27hxw0p', '__ejs-test-mail-service__', '#contact-form')
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 document.getElementById("contact-form").reset();
@@ -71,7 +71,10 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["web development"],
+    strings: ["web development",
+        "Frontend Developer",
+        "Backend Developer",
+    ],
     loop: true,
     typeSpeed: 70,
     backSpeed: 25,
@@ -84,7 +87,7 @@ async function fetchData(type = "skills") {
     type === "skills" ?
         response = await fetch("skills.json")
         :
-        response = await fetch("./projects/projects.json")
+        response = await fetch("./projects.json")
     const data = await response.json();
     return data;
 }
@@ -109,12 +112,92 @@ fetchData().then(data => {
     showSkills(data);
 });
 
+function showProjects(projects) {
+    let projectsContainer = document.querySelector("#work .box-container");
+    let projectHTML = "";
+    projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
+        projectHTML += `
+        <div class="box tilt">
+        <img draggable="false" src="/assets/images/project images/${project.image}.png" alt="project" />
+        <div class="content">
+        <div class="tag">
+        <h3>${project.name}</h3>
+        </div>
+        <div class="desc">
+          <p>${project.desc}</p>
+          <div class="btns">
+            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="#" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>`
+    });
+    projectsContainer.innerHTML = projectHTML;
 
-// <!-- tilt js effect starts -->
-VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    max: 15,
+    // <!-- tilt js effect starts -->
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 15,
+    });
+    // <!-- tilt js effect ends -->
+
+    /* ===== SCROLL REVEAL ANIMATION ===== */
+    const srtop = ScrollReveal({
+        origin: 'top',
+        distance: '80px',
+        duration: 1000,
+        reset: true
+    });
+
+    /* SCROLL PROJECTS */
+    srtop.reveal('.work .box', { interval: 200 });
+
+}
+
+fetchData("projects").then(data => {
+    showProjects(data);
 });
-// <!-- tilt js effect ends -->
+
+
+// <!-- contact section starts -->
+// document.addEventListener('DOMContentLoaded', () => {
+//     const form = document.getElementById('contact-form');
+    
+//     form.addEventListener('submit', function(event) {
+//         event.preventDefault(); // Prevent the default form submission
+        
+//         // Retrieve form data
+//         const name = form.querySelector('input[name="name"]').value;
+//         const email = form.querySelector('input[name="email"]').value;
+//         const phone = form.querySelector('input[name="phone"]').value;
+//         const message = form.querySelector('textarea[name="message"]').value;
+
+//         // Simple validation (you can enhance this)
+//         if (!name || !email || !message) {
+//             alert('Please fill in all required fields.');
+//             return;
+//         }
+
+//         // Create a data object (you might want to send this to a server)
+//         const formData = {
+//             name: name,
+//             email: email,
+//             phone: phone,
+//             message: message
+//         };
+
+//         console.log('Form submitted with data:', formData);
+        
+//         // Simulate form submission
+//         // You might replace this with actual code to send data to a server
+//         alert('Thank you for your message!');
+
+//         // Clear the form fields (optional)
+//         form.reset();
+//     });
+// });
+
+// <!-- contact section ends -->
 
 
 // Start of Tawk.to Live Chat
