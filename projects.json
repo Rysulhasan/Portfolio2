@@ -3,18 +3,55 @@
       "name": "Quick Fill App",
       "desc": "A versatile Chrome extension designed to automate form filling tasks. Built with JavaScript and spring boot framework.",
       "image": "quickfillimg",
-      "category": "extension"
+      "category": "extension",
+      "links": 
+        {
+          "github_code": "https://github.com/vishvasg14/chrome-extension",
+          "live": "#"
+        }
     },
     {
       "name": "Portfolio",
       "desc": "Personal portfolio website. Built with HTML, CSS, and JavaScript.",
       "image": "portfolioimg",
-      "category": "web"
+      "category": "web",
+      "links": 
+        {
+          "github_code": "https://github.com/vishvasg14/Portfolio.github.io",
+          "live": "https://vishvasg14.github.io/Portfolio.github.io/"
+        }
     },
     {
       "name": "Employee Leave System",
       "desc": "A web application with role-based access control, built using Angular and Spring Boot. It features secure authentication, leave tracking.",
       "image": "employeeleavesystemimg",
-      "category": "web application"
+      "category": "web application",
+      "links": 
+        {
+          "github_code": "#",
+          "live": "#"
+        }
+    }, 
+    {
+      "name": "Angular Api App",
+      "desc": "An Angular app that fetches and displays user data from a public API in a dynamic table, with client-side CRUD operations for efficient data management.",
+      "image": "simplerestappimg",
+      "category": "web application",
+      "links": 
+        {
+          "github_code": "https://github.com/vishvasg14/Angular-API-App",
+          "live": "https://angular-api-app.vercel.app/"
+        }
+    }, 
+    {
+      "name": "Spring Rest App",
+      "desc": "RESTful web application using Spring Boot to perform CRUD operations, integrated with MySQL for data storage",
+      "image": "springrestappimg",
+      "category": "web application",
+      "links": 
+        {
+          "github_code": "https://github.com/vishvasg14/basicRestApp",
+          "live": "#"
+        }
     }
   ]
