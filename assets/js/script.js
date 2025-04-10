@@ -69,16 +69,11 @@ document.addEventListener('visibilitychange',
     });
 
 
-// <!-- typed js effect starts -->
-var typed = new Typed(".typing-text", {
-    strings: ["web development",
-        "Frontend Developer",
-        "Backend Developer",
-    ],
-    loop: true,
-    typeSpeed: 70,
-    backSpeed: 25,
-    backDelay: 500,
+// Change the typing text to reflect your interests
+var typed = new Typed('.typing-text', {
+  strings: ['environmental research', 'GIS analysis', 'renewable energy', 'data science', 'sustainability solutions'],
+  typeSpeed: 50,
+  loop: true
 });
 // <!-- typed js effect ends -->
 
