@@ -1,5 +1,4 @@
-// In script.js, update the skills array:
-const skills = [
+[
   { name: "GIS (ArcGIS, Google Earth Engine)", percentage: "90%" },
   { name: "Data Analysis (Python, Machine Learning)", percentage: "85%" },
   { name: "Environmental Research", percentage: "95%" },
